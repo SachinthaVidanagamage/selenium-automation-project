@@ -41,6 +41,7 @@ public class LocatorsPractice {
     public void methodName() {
 
         driver.findElement(By.name("searchWords")).sendKeys("mouse" + Keys.ENTER);
+        //take screenshot
         TakesScreenshot ts = (TakesScreenshot)driver;
         File sourse =(File)ts.getScreenshotAs(OutputType.FILE);
         new File("C:\\Users\\HP\\Desktop\\battory\\aliexpress_search.png");
