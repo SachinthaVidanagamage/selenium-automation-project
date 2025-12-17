@@ -4,7 +4,8 @@ public class TestNG {
 
     public static void main(String[] args) {
         System.out.println( "main");
-        TestNG obj = new TestNG();
+        TestNG obj = new TestNG();  // crate object for call normal method run
+        obj.beforeclass();  // like this call normal method.  otherwice  only run main method
 
 
     }

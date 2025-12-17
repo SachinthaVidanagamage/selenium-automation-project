@@ -23,7 +23,7 @@ public class Report {
 
     @BeforeClass
     public void startReport() {
-
+// html report save with date and timw
         String timestamp = new SimpleDateFormat("yyyy.MM.dd_HH.mm.ss").format(new Date());
 
         // FIXED: Correct report file path
