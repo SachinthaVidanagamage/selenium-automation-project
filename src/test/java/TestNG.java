@@ -10,6 +10,8 @@ public class TestNG {
 
     }
 
+
+
     @AfterClass
     public void afterClass(){
         System.out.println("Browser closed"); //11
