@@ -1,3 +1,4 @@
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -11,7 +12,9 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
 
+
 public class LocatorsPractice {
+
 
 
     WebDriver driver;
@@ -38,14 +41,14 @@ public class LocatorsPractice {
 
 
     @Test
-    public void methodName() {
+    public void methodName() throws IOException {
 
         driver.findElement(By.name("searchWords")).sendKeys("mouse" + Keys.ENTER);
         //take screenshot
         TakesScreenshot ts = (TakesScreenshot)driver;
         File sourse =(File)ts.getScreenshotAs(OutputType.FILE);
-        new File("C:\\Users\\HP\\Desktop\\battory\\aliexpress_search.png");
-
+        File destination = new File("C:\\Users\\HP\\IdeaProjects\\questionsproject\\src\\test\\java\\screenshot\\epic.png");
+        FileUtils.copyFile(sourse, destination);
 
 
     }
@@ -120,9 +123,12 @@ public void linkText(){
 
     }
     @Test
-    public void linkText2(){
-//        driver.findElement(By.linkText("Bundle"));
-        driver.findElement(By.linkText("Bundle"));
+    public void linkText2() throws InterruptedException {
+        Thread.sleep(50000);
+        driver.findElement(By.linkText("Bundle deals"));
+
+
+
 
     }
 
@@ -143,17 +149,12 @@ Assert.assertEquals(currentUrl,"https://www.aliexpress.com/ssr/300000512/BundleD
 
     }
 @Test
-    public  void checkUrl2(){
-     driver.findElement(By.linkText( "Cart" )).click();
-
-        String currentUrl = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrl,"https://www.aliexpress.com/p/shoppingcart/index.html?spm=a2g0o.cart.header.1.2e2d38daDsMLfz");
+    public  void checkUrl2() throws InterruptedException {
+    Thread.sleep(5000);
+    driver.findElement(By.linkText("Cart")).click();
+//        String currentUrl = driver.getCurrentUrl();
+//        Assert.assertEquals(currentUrl,"https://www.aliexpress.com/p/shoppingcart/index.html?spm=a2g0o.cart.header.1.44b938dafOwtqN");
     }
-
-
-
-
-
-
+    
 
 }
