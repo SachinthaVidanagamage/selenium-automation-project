@@ -7,7 +7,12 @@ import org.testng.annotations.Test;
 
 public class Links {
     WebDriver driver;
-
+    @BeforeMethod
+    public void beforeMethod(){
+        driver= new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://demoqa.com/links");
+    }
 
     @Test
     public void methodONe(){
