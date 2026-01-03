@@ -18,6 +18,7 @@ public class Links {
     @Test
     public void openNewTabMethod(){
         driver.findElement(By.id("simpleLink")).click();
+        driver.findElement(By.id("dynamicLink")).click();
 
     }
 }
