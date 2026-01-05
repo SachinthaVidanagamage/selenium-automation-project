@@ -23,7 +23,7 @@ public class ScreenShotTake {
             TakesScreenshot ts = (TakesScreenshot) driver;
             File source = ts.getScreenshotAs(OutputType.FILE);
             // Save to your folder
-            File destination = new File("C:\\Users\\HP\\Desktop\\battory\\aliexpress.png");
+            File destination = new File("C:\\Users\\HP\\Desktop\\battory\\aliexpressnew.png");
             Files.copy(source.toPath(), destination.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
 
