@@ -25,14 +25,14 @@ public void methodForRegister() throws InterruptedException {
     Thread.sleep(10000);
     driver.findElement(By.id("newUser")).click();
     driver.findElement(By.id("firstname")).sendKeys("Sachintha");
-    driver.findElement(By.id("lastname")).sendKeys("Lakshan");
-    driver.findElement(By.id("userName")).sendKeys("sachin_vidanagamage");
-    driver.findElement(By.id("password")).sendKeys("sachin123");
+    driver.findElement(By.id("lastname")).sendKeys("Vidanagamage");
+    driver.findElement(By.id("userName")).sendKeys("sachinthavida");
+    driver.findElement(By.id("password")).sendKeys("Sachintha@123");
     Thread.sleep(5000);
     driver.findElement(By.id("gotologin")).click();
 
-    driver.findElement(By.id("userName")).sendKeys("sachin_vidanagamage");
-    driver.findElement(By.id("password")).sendKeys("sachin123");
+    driver.findElement(By.id("userName")).sendKeys("sachinthavida");
+    driver.findElement(By.id("password")).sendKeys("Sachintha@123");
     Thread.sleep(8000);
     driver.findElement(By.id("login")).click();
 
